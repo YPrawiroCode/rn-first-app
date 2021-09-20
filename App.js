@@ -16,12 +16,15 @@ export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
 
   if (!fontLoaded) {
-    return (
-      <AppLoading 
-        startAync={fetchFonts} 
-        onFinish={() => setFontLoaded(true)} 
-      />
-    )
+    // return (
+      // <AppLoading
+      //   startAync={fetchFonts}
+      //   onFinish={() => {
+      //     setFontLoaded(true)
+      //   }}
+      //   onError={(err) => console.log(err)}
+      // />
+    // );
   }
 
   return <MealsNavigator />;
