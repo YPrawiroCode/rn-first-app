@@ -9,6 +9,7 @@ import ReduxThunk from 'redux-thunk';
 import ordersReducer from './store/reducers/orders';
 import productsReducer from "./store/reducers/products";
 import cartReducer from "./store/reducers/cart";
+import authReducer from "./store/reducers/auth";
 import ShopNavigator from "./navigation/ShopNavigator";
 
 LogBox.ignoreLogs([
@@ -18,7 +19,8 @@ LogBox.ignoreLogs([
 const rootReducer = combineReducers({
   products: productsReducer,
   cart: cartReducer,
-  orders: ordersReducer
+  orders: ordersReducer,
+  auth: authReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
